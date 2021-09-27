@@ -48,8 +48,6 @@ namespace CalculadoraBasica
                 MessageBox.Show("Se ha producido un error. Revisa los operandos.");
             }
 
-
-
         }
 
         private void limpiar_Button_Click(object sender, RoutedEventArgs e)
