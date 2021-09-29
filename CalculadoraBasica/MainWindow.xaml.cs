@@ -37,9 +37,9 @@ namespace CalculadoraBasica
 
             try
             {
-                num1 = int.Parse(operando1_text.Text);
-                num2 = int.Parse(operando2_text.Text);
-                operador = char.Parse(operador_text.Text);
+                num1 = int.Parse(operando1TextBox.Text);
+                num2 = int.Parse(operando2TextBox.Text);
+                operador = char.Parse(operadorTextBox.Text);
                 CalcularResultado();
 
             }
@@ -52,10 +52,11 @@ namespace CalculadoraBasica
 
         private void limpiar_Button_Click(object sender, RoutedEventArgs e)
         {
-            operador_text.Clear();
-            operando1_text.Clear();
-            operando2_text.Clear();
-            calcular_Button.IsEnabled = false;
+            operadorTextBox.Clear();
+            operando1TextBox.Clear();
+            operando2TextBox.Clear();
+            resultadoTextBox.Clear();
+            calcularButton.IsEnabled = false;
 
         }
         private void CalcularResultado() 
@@ -63,18 +64,18 @@ namespace CalculadoraBasica
             switch (operador)
             {
                 case '+':
-                    resultado_text.Text = (num1 + num2).ToString(); 
+                    resultadoTextBox.Text = (num1 + num2).ToString(); 
                     break;
 
                 case '-':
-                    resultado_text.Text = (num1 - num2).ToString();
+                    resultadoTextBox.Text = (num1 - num2).ToString();
                     break;
 
                 case '/':
-                    resultado_text.Text = (num1 / num2).ToString();
+                    resultadoTextBox.Text = (num1 / num2).ToString();
                     break;
                 case '*':
-                    resultado_text.Text = (num1 * num2).ToString();
+                    resultadoTextBox.Text = (num1 * num2).ToString();
                     break;
 
                 default:
@@ -87,7 +88,7 @@ namespace CalculadoraBasica
         private void operador_text_TextChanged(object sender, TextChangedEventArgs e)
         {
             if ((operador != '+') || (operador != '-') || (operador != '/') || (operador != '*'))
-                calcular_Button.IsEnabled = true;
+                calcularButton.IsEnabled = true;
         }
     }
 }

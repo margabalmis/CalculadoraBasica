@@ -17,7 +17,7 @@
                    VerticalAlignment="Top"
                    Height="39"
                    Width="152" />
-        <TextBox x:Name="operando1_text"
+        <TextBox x:Name="operando1TextBox"
                  HorizontalAlignment="Left"
                  Height="39"
                  Margin="312,76,0,0"
@@ -31,7 +31,7 @@
                    VerticalAlignment="Top"
                    Height="39"
                    Width="152"><Run Text="Operando " /><Run Text="2" /></TextBlock>
-        <TextBox x:Name="operando2_text"
+        <TextBox x:Name="operando2TextBox"
                  HorizontalAlignment="Left"
                  Height="39"
                  Margin="312,143,0,0"
@@ -45,7 +45,7 @@
                    VerticalAlignment="Top"
                    Height="39"
                    Width="152"><Run Text="Oper" /><Run Text="ador" /></TextBlock>
-        <TextBox x:Name="operador_text"
+        <TextBox x:Name="operadorTextBox"
                  HorizontalAlignment="Left"
                  Height="39"
                  Margin="312,213,0,0"
@@ -61,7 +61,8 @@
                    VerticalAlignment="Top"
                    Height="39"
                    Width="152" />
-        <TextBox x:Name="resultado_text"
+        <TextBox x:Name="resultadoTextBox"
+                 IsReadOnly="True"
                  HorizontalAlignment="Left"
                  Height="39"
                  Margin="312,282,0,0"
@@ -69,8 +70,9 @@
                  Text=""
                  VerticalAlignment="Top"
                  Width="123" />
-        <Button x:Name="calcular_Button"
+        <Button x:Name="calcularButton"
                 IsEnabled="False"
+                IsDefault="True"
                 Content="Calcular"
                 HorizontalAlignment="Left"
                 Margin="570,97,0,0"
@@ -78,7 +80,7 @@
                 Width="147"
                 Height="39"
                 Click="calcular_Button_Click" />
-        <Button x:Name="limpiar_Button"
+        <Button x:Name="limpiarButton"
                 Content="Reiniciar"
                 IsDefault="False"
                 HorizontalAlignment="Left"
