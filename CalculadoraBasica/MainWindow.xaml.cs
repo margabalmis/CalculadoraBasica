@@ -40,7 +40,26 @@ namespace CalculadoraBasica
                 num1 = int.Parse(operando1TextBox.Text);
                 num2 = int.Parse(operando2TextBox.Text);
                 operador = char.Parse(operadorTextBox.Text);
-                CalcularResultado();
+             
+
+                switch (operador)
+                {
+                    case '+':
+                        resultadoTextBox.Text = (num1 + num2).ToString();
+                        break;
+
+                    case '-':
+                        resultadoTextBox.Text = (num1 - num2).ToString();
+                        break;
+
+                    case '/':
+                        resultadoTextBox.Text = (num1 / num2).ToString();
+                        break;
+                    case '*':
+                        resultadoTextBox.Text = (num1 * num2).ToString();
+                        break;
+
+                }
 
             }
             catch (Exception)
@@ -57,31 +76,6 @@ namespace CalculadoraBasica
             operando2TextBox.Clear();
             resultadoTextBox.Clear();
             calcularButton.IsEnabled = false;
-
-        }
-        private void CalcularResultado() 
-        {
-            switch (operador)
-            {
-                case '+':
-                    resultadoTextBox.Text = (num1 + num2).ToString(); 
-                    break;
-
-                case '-':
-                    resultadoTextBox.Text = (num1 - num2).ToString();
-                    break;
-
-                case '/':
-                    resultadoTextBox.Text = (num1 / num2).ToString();
-                    break;
-                case '*':
-                    resultadoTextBox.Text = (num1 * num2).ToString();
-                    break;
-
-                default:
-                    
-                    break;
-            }
 
         }
 
